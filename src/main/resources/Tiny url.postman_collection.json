@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "eda1346a-3c3f-4429-84b0-542b834b2187",
+		"name": "Tiny url",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26852907"
+	},
+	"item": [
+		{
+			"name": "Generate Url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"longUrl\" : \"https://drive.google.com/file/d/1Ntvw0eafIdNB0WbDS0QeIdES4fKBAAon/view?usp=drive_link4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/generateTinyUrl",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"generateTinyUrl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch original url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/fetchOriginalUrl/198a03a",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"fetchOriginalUrl",
+						"198a03a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "redirect url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/redirect/09491bf",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"redirect",
+						"09491bf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
